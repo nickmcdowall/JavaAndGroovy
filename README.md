@@ -65,17 +65,17 @@ Using <code>Maven</code>
 It is slightly trickier to setup the <code>Maven</code> build config. Firstly we need to add a <code>Groovy</code> plugin to
 the pom file. Note that although the compiler has <em>eclipse</em> in its name there is no requirement to use eclipse [It is simply
 the same compiler that is used by the eclipse <code>Groovy</code> plugin to compile <code>Groovy</code> source files].
-<xmp>
+```xml
 	<plugin>
 		<groupId>org.codehaus.groovy</groupId>
 		<artifactId>groovy-eclipse-compiler</artifactId>
 		<version>2.6.0-01</version>
 		<extensions>true</extensions>
 	</plugin>
-</xmp>
+```
 By default the project source folder layout is the same for both <code>Maven</code> and <code>Gradle</code>. Next we need
 to configure the <code>Maven</code> compiler to use the <code>Groovy</code> compiler plugin as a dependency:
-<xmp>
+```xml
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-compiler-plugin</artifactId>
@@ -93,19 +93,19 @@ to configure the <code>Maven</code> compiler to use the <code>Groovy</code> comp
 			</dependency>
 		</dependencies>
 	</plugin>
-</xmp>
+```
 Finally we need to add the compile time project dependency to the pom [This is what determines which <code>Groovy</code>
 version gets used]:
-<xmp>
+```xml
 	<dependency>
 		<groupId>org.codehaus.groovy</groupId>
 		<artifactId>groovy-all</artifactId>
 		<version>2.0.5</version>
 	</dependency>
-</xmp>
+```
 
 Here is a full example based on a cut down version of this git project's pom:
-<xmp>
+```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -149,7 +149,7 @@ Here is a full example based on a cut down version of this git project's pom:
 			</dependency>
 		</dependencies>
 	</project>
-</xmp>
-Not quite as clean as Gradle but it does the same job.
+```
+Not quite as clean as <code>Gradle</code> but it does the same job.
 
 See the project source for a real albeit simplistic example.
