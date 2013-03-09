@@ -5,7 +5,7 @@ version = '1.0'
 
 jar {
 	manifest {
-		attributes 'Implementation-Title': 'JavaAndGroovy', 'Implementation-Version': version
+		attributes 'Title': 'JavaAndGroovy', 'Version': version
 	}
 }
 
