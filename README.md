@@ -152,4 +152,4 @@ Here is a full example based on a cut down version of this git project's pom:
 ```
 Not quite as clean as <code>Gradle</code> but it does the same job.
 
-See the project source for a real albeit simplistic example.
+See the project source for a real albeit simplistic example of a project with Java and Groovy classes.
