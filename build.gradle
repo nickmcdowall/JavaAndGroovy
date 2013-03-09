@@ -4,19 +4,19 @@ apply plugin: 'groovy'
 version = '1.0'
 
 jar {
-    manifest {
-        attributes 'Implementation-Title': 'JavaAndGroovy', 'Implementation-Version': version
-    }
+	manifest {
+		attributes 'Implementation-Title': 'JavaAndGroovy', 'Implementation-Version': version
+	}
 }
 
 repositories {
 	mavenLocal()
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
 	compile 'org.codehaus.groovy:groovy-all:2.0.5'
 
-    testCompile 'junit:junit:4.+'
+	testCompile 'junit:junit:4.+'
 	testCompile 'org.mockito:mockito-all:1.8.4'
 }
