@@ -4,7 +4,9 @@
 *.jar
 *.war
 *.ear
+*.iml
 
+.idea
 .project
 .classpath
 .groovy
